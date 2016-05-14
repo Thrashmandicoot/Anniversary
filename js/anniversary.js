@@ -10,7 +10,7 @@ var love = setInterval(function() {
 
   var smallHeart = "<div class='heart' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>"
   
-  var ashLiz = "<div class='ashLiz' style='font-size:" + randomSize() +"px;color:" + randomColor() + ";width:" + (r_size + 150) + "px;height:" + (r_size + 150) + "px;left:" + (r_left - r_num) + "%;-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + (r_time + 15) + "s ease;animation:love " + (r_time + 15) + "s ease'>Ash & Liz</div>"
+  var ashLiz = "<div class='ashLiz' style='font-size:" + randomSize() +"px;color:" + randomColor() + ";width:" + (r_size + 150) + "px;height:" + (r_size + 150) + "px;left:" + (r_left - r_num) + "%;-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + (r_time + 15) + "s ease;animation:love " + (r_time + 15) + "s ease'>"+ genAshLiz() +"</div>"
   
   $('.bg_heart').append(bigHeart);
 
@@ -28,6 +28,17 @@ var love = setInterval(function() {
   
   
 }, 500);
+
+function genAshLiz() {
+  var flip = Math.floor(Math.random() * 2);
+  var ashLiz;
+  if(flip == 1){
+    ashLiz = "Ash & Liz"
+  } else {
+    ashLiz = "Liz & Ash"
+  }
+  return ashLiz;
+}
 
 function randomSize(){
     return Math.floor(Math.random() * 30) + 20;
