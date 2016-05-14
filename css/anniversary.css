@@ -2,21 +2,18 @@ html,body{
   height:100%;
 }
 
-#bg {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  z-index: -1;
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
 
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
-  background-repeat:no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-  background-position:center
+.stretch {
+    width:100%;
+    height:100%;
 }
 
 .bg_heart {
